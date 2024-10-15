@@ -6,6 +6,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 h1, h2, h3, h4, h5, h6, span {
     color: #242424;
     text-align: center;
@@ -323,7 +327,27 @@ footer {
 }
 
 .footer__social--link,
-.footer__copyright {
+.footer__copyright,
+.footer__logo--popper {
     color: #fff;
     margin: 10px;
+}
+
+.footer__logo--popper {
+position: absolute;
+right: 0;
+top: 30px;
+font-weight: 700;
+opacity: 0;
+transition: all 300ms ease;
+}
+
+.footer__anchor {
+    position: relative;
+    margin: 10px;
+}
+
+.footer__anchor:hover .footer__logo--popper {
+    transform: translateX(60px);
+    opacity: 1;
 }
